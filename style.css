@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --font-color: black;
+    --bg-color: white;
+    --btn-Icon: url("https://caelum-online-public.s3.amazonaws.com/1369-alura-mais-dark-mode/lua.png");
+    --gradiente: linear-gradient(to right, #4B0082, #191970, #00BFFF);
+    --opacidade: 0;
+}
+
+.dark-mode{
+    --font-color: white;
+    --bg-color: #363636;
+    --btn-Icon: url("https://caelum-online-public.s3.amazonaws.com/1369-alura-mais-dark-mode/sol.png");
+    --transicao: translate(+250px);
+    --gradiente: linear-gradient(to left, #800000, #FF0000, #FF6347);
+    --opacidade: 1;
+}
+body, main{
+    color: var(--font-color);
+    background: var(--bg-color);
+    transition: all .5s;
+    font-family: 'Open Sans', sans-serif;
+}
+h1{
+    position: absolute;
+    z-index: 100;
+    top: 13.5%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 3em;
+}
+main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: none;
+}
+section{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%);
+    align-items: center;
+    justify-content: center;
+}
+p{
+    opacity: .7;
+    font-size: 2em;
+}
+h2{
+    opacity: var(--opacidade);
+    font-size: 2.1em;
+}
+#conteiner{
+    background: var(--gradiente);
+    height: 200px;
+    width: 450px;
+    border-radius: 105px;
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 5px;
+}
+#area{
+    background-image: var(--btn-Icon);
+    background-color: var(--bg-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    height:189px;
+    width:189px;
+    border-radius: 50%;
+    border: 3px solid black;
+    transform: var(--transicao);
+    transition: all .5s;
+}
+#links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
